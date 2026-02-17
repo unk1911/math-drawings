@@ -2,6 +2,10 @@
 
 A project that creates artistic images using pure mathematical formulas - no traditional graphics or drawing tools, just mathematical equations evaluated at each pixel.
 
+## Credits
+
+**The mathematical equations for the snow-covered village were created by [Hamid Naderi Yeganeh](http://www.hamidnaderiyeganeh.com/)**, an Iranian mathematical artist renowned for creating intricate artworks from mathematical formulas. This implementation brings his beautiful mathematical equations to life through code.
+
 ## Overview
 
 This project generates a beautiful snow-covered village scene entirely from mathematical formulas. Each pixel's RGB color value is computed using complex mathematical expressions involving trigonometric functions, exponentials, and various parameters.
