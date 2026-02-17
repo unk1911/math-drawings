@@ -4,6 +4,7 @@ Computes a 2000x1200 image where each pixel's RGB is defined by H_0, H_1, H_2.
 Uses NumPy vectorization: loops over s (houses/terrain terms), not over pixels.
 """
 
+import os
 import numpy as np
 from PIL import Image
 import time
@@ -177,7 +178,7 @@ img_array = np.stack(channels, axis=2)   # (H, W, 3)
 
 # ── Save ─────────────────────────────────────────────────────────────────────
 
-out_path = "math-village-generated.png"
+out_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "resources", "math-village-generated.png")
 Image.fromarray(img_array, mode="RGB").save(out_path)
 elapsed = time.time() - t0
 print(f"\nDone! Saved to {out_path}  ({elapsed:.1f}s)")
