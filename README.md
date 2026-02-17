@@ -14,7 +14,7 @@ This project generates a beautiful snow-covered village scene entirely from math
 
 ## How It Works
 
-The script generates a 2000x1200 pixel image where each pixel's RGB color is defined by three functions H₀(x,y), H₁(x,y), and H₂(x,y). The implementation uses several mathematical components:
+The script generates a 2000x1200 pixel image where each pixel's RGB color is defined by three functions H₀(x,y), H₁(x,y), and H₂(x,y) - one for each color channel (Red, Green, Blue). The implementation uses several mathematical components:
 
 ### Key Mathematical Components
 
@@ -30,7 +30,7 @@ The script generates a 2000x1200 pixel image where each pixel's RGB color is def
 ### Technical Approach
 
 - Uses NumPy vectorization for efficiency (loops over structures, not pixels)
-- Normalized coordinates: x ∈ [-5/3, 5/3], y ∈ [-5/6, 5/6]
+- Normalized coordinates: x ∈ [-5/3, 5/3], y ∈ [-5/6, 5/6] (maps the 2000x1200 pixel space to a mathematical coordinate system centered at the origin)
 - Safe exponential functions with clamping to avoid numerical overflow
 - Each house has unique positioning, rotation, and detail based on its index
 
