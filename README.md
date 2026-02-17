@@ -2,6 +2,13 @@
 
 A project that creates artistic images using pure mathematical formulas - no traditional graphics or drawing tools, just mathematical equations evaluated at each pixel.
 
+## Gallery
+
+| Original Image | Generated Image |
+|:-:|:-:|
+| <img src="resources/snow_covered_village_original.jpg" width="400"> | <img src="resources/math-village-generated.png" width="400"> |
+| *Original snow-covered village* | *Mathematically generated village* |
+
 ## Credits
 
 **The mathematical equations for the snow-covered village were created by [Hamid Naderi Yeganeh](http://www.hamidnaderiyeganeh.com/)**, an Iranian mathematical artist renowned for creating intricate artworks from mathematical formulas. This implementation brings his beautiful mathematical equations to life through code.
@@ -10,11 +17,17 @@ A project that creates artistic images using pure mathematical formulas - no tra
 
 This project generates a beautiful snow-covered village scene entirely from mathematical formulas. Each pixel's RGB color value is computed using complex mathematical expressions involving trigonometric functions, exponentials, and various parameters.
 
-## What's Included
+## Project Structure
 
-- `gen_math_village_img.py` - Python script that generates the snow village image from mathematical formulas
-- `snow_covered_village_original.jpg` - Original reference image that inspired the mathematical recreation
-- `math-village-generated.png` - The generated output image (2000x1200 pixels)
+```
+math-drawings/
+├── src/                        # Source code
+│   └── gen_math_village_img.py # Python script that generates the snow village image
+├── resources/                  # Images and other resources
+│   ├── snow_covered_village_original.jpg  # Original reference image
+│   └── math-village-generated.png         # Generated output image (2000x1200)
+└── README.md
+```
 
 ## How It Works
 
@@ -49,12 +62,12 @@ pip install numpy pillow
 Simply run the Python script:
 
 ```bash
-python gen_math_village_img.py
+python src/gen_math_village_img.py
 ```
 
 The script will:
 1. Generate the image (takes several seconds due to the complex calculations)
-2. Save the output as `math-village-generated.png`
+2. Save the output as `resources/math-village-generated.png`
 3. Display progress and timing information
 
 ## Output
